@@ -1,0 +1,14 @@
+"200":
+  description: Successful request.
+  content:
+    application/json:
+      schema:
+        type: object
+        properties:
+          movies:
+            type: array
+            items:
+              $ref: '../../schemas/movies/[movieId]/movie.yml'
+          last_id:
+            type: string
+            description: The last movieId.

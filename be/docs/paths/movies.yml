@@ -1,0 +1,7 @@
+get:
+  tags:
+    - movie
+  summary: "List Movies"
+  description: "Lists all Movies"
+  responses:
+    $ref: "../responses/movies/get.yml"

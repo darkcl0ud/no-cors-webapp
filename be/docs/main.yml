@@ -1,0 +1,17 @@
+openapi: "3.0.3"
+info:
+  title: "Movie API"
+  version: "1.0.0"
+  description: |
+    This is a template API which uses movies as examples.
+tags:
+  - name: movie
+    description: For movie related endpoints.
+paths:
+  /movies:
+    $ref: "./paths/movies.yml"
+  /movies/${movieId}:
+    $ref: "./paths/movies/[movieId].yml"
+components:
+  securitySchemes: {}
+  requestBodies: {}
