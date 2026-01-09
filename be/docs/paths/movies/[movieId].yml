@@ -3,5 +3,7 @@ get:
     - movie
   summary: "Get Movie"
   description: "Retrieve a specific Movie"
+  parameters:
+    - $ref: "../../parameters/movieId.yml"
   responses:
     $ref: "../../responses/movies/[movieId]/get.yml"

@@ -10,7 +10,7 @@ tags:
 paths:
   /movies:
     $ref: "./paths/movies.yml"
-  /movies/${movieId}:
+  /movies/{movieId}:
     $ref: "./paths/movies/[movieId].yml"
 components:
   securitySchemes: {}
