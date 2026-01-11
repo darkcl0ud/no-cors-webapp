@@ -12,7 +12,7 @@ all:
 
 clean:
 	$(MAKE) clean -C docs
-	rm internal/api/openapi.gen.go
+	@rm internal/api/openapi.gen.go
 	@docker rmi $(ECR_REPO_URI):latest
 	@aws ecr delete-repository --repository-name no-cors-webapp/be --force
 
