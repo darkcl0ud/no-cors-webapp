@@ -1,3 +1,4 @@
+.PHONY: all clean help
 all:
 	npm i
 	npx redocly bundle main.yml --output openapi.yml
