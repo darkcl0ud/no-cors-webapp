@@ -5,7 +5,7 @@ ECR_REPO_URI := $(shell aws ecr describe-repositories --repository-names no-cors
 all:
 	$(MAKE) -C docs
 	@go tool oapi-codegen --config=codegen.yml docs/openapi.yml
-	@docker build -t no-cors-webapp/be .
+	@docker build -t no-cors-webapp/be . --platform linux/arm64
 	@aws ecr get-login-password | docker login --username AWS --password-stdin $(ECR_REPO_URI)
 	@docker tag no-cors-webapp/be:latest $(ECR_REPO_URI):latest
 	@docker push $(ECR_REPO_URI):latest
