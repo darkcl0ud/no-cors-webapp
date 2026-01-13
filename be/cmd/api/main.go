@@ -11,7 +11,9 @@ func main() {
 
 	r := gin.Default()
 
-	api.RegisterHandlers(r, myHandler)
+	api.RegisterHandlersWithOptions(r, myHandler, api.GinServerOptions{
+		BaseURL: "/api",
+	})
 
 	err := r.Run(":80")
 
