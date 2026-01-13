@@ -29,7 +29,8 @@ go.work.sum
 
 # tofu
 .terraform*
+terraform*
 
 # Editor/IDE
-# .idea/
+.idea/
 # .vscode/
