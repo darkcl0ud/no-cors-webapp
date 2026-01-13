@@ -3,9 +3,11 @@
 all:
 	$(MAKE) -C be
 	tofu init
+	tofu apply
 
 clean:
 	tofu init
+	tofu destroy
 	$(MAKE) clean -C be
 
 help:
