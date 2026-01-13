@@ -7,7 +7,11 @@ info:
 tags:
   - name: movie
     description: For movie related endpoints.
+  - name: health
+    description: For health related endpoints.
 paths:
+  /health:
+    $ref: "./paths/health.yml"
   /movies:
     $ref: "./paths/movies.yml"
   /movies/{movieId}:

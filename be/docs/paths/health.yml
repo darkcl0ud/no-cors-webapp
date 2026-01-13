@@ -1,0 +1,7 @@
+get:
+  tags:
+    - health
+  summary: "Health Check"
+  description: "Checks container health"
+  responses:
+    $ref: "../responses/health/get.yml"

@@ -25,3 +25,7 @@ func (s Server) GetMoviesMovieId(c *gin.Context, movieId string) {
 	}
 	c.JSON(http.StatusOK, movie)
 }
+
+func (s Server) GetHealth(c *gin.Context) {
+	c.JSON(http.StatusNoContent, map[string]string{})
+}
