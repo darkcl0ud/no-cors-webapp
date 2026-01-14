@@ -10,5 +10,6 @@ RUN CGO_ENABLED=0 GOOS=linux go build cmd/api/main.go
 FROM alpine:latest
 WORKDIR /root/
 COPY --from=builder /app/main .
+EXPOSE 80
 RUN apk add --no-cache curl
 CMD ["./main"]
