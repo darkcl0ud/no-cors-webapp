@@ -1,0 +1,6 @@
+"200":
+  description: Successful request.
+  content:
+    application/json:
+      schema:
+        type: object

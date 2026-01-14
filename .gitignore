@@ -27,6 +27,10 @@ go.work.sum
 # env file
 .env
 
+# tofu
+.terraform*
+terraform*
+
 # Editor/IDE
-# .idea/
+.idea/
 # .vscode/
