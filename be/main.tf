@@ -237,6 +237,12 @@ resource "aws_ecs_task_definition" "api_server" {
         command     = ["CMD-SHELL", "curl -f http://localhost/api/health || exit 1"]
         startPeriod = 30
       }
+      environment = [
+        {
+          name = "GIN_MODE",
+          value = "release"
+        }
+      ]
     },
   ])
 
